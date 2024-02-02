@@ -32,4 +32,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build
         run: npx yarn build
-          
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with: 
+          name: assets
+          path: dist
